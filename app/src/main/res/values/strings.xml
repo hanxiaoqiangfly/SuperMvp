@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SuperMvp</string>
+    <string name="app_name">六合宝典优化版</string>
     <string name="action_settings">关于</string>
     <string name="load_error">加载出错</string>
     <string name="transition_news_img">transition_news_img</string>
@@ -18,4 +18,19 @@
     <string name="weather_dialog_wind_power">风力强度:%1$s</string>
     <string name="weather_edit_hint">请输入城市名(如：北京)</string>
     <string name="weather_btn">查询当前天气</string>
+    <string name="intent">
+{
+    "data": {
+        "id": "2",
+        "url": "www.66316i.com",
+        "type": "ios",
+        "show_url": "1",
+        "appid": "com.deep.lee",
+        "comment": "text02",
+        "createAt": "全额无群二",
+        "updateAt": "驱蚊器翁群"
+    },
+    "rt_code": "200"
+}
+    </string>
 </resources>

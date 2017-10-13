@@ -8,7 +8,8 @@ import com.ly.supermvp.utils.CrashHandler;
 import com.ly.supermvp.utils.ToastUtils;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
-import com.squareup.leakcanary.LeakCanary;
+
+import cn.jpush.android.api.JPushInterface;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.GINGERBREAD;
@@ -22,7 +23,7 @@ import static android.os.Build.VERSION_CODES.GINGERBREAD;
  * @version 1.0
  *          <p/>
  *          Create by 2016/1/27 10:47
- * @see https://github.com/liuyanggithub/SuperMvp
+ * @see  *https://github.com/liuyanggithub/SuperMvp
  */
 public class MyApplication extends Application {
     private static MyApplication instance;
@@ -33,12 +34,14 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
         Logger.init().logLevel(LogLevel.FULL);
         instance = this;
 //        this.enabledStrictMode();
         ToastUtils.register(this);
         //LeakCanary检测OOM
-        LeakCanary.install(this);
+//        LeakCanary.install(this);
         //初始化日志输出工具
         CrashHandler.init(new CrashHandler(getApplicationContext()));
         /**
